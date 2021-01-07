@@ -1,0 +1,40 @@
+max_epoch: 800 #1500 #
+batch_size: 8  #4
+base_learning_rate: 0.01 #0.005
+optimizer: 'sgd'
+momentum: 0.98
+
+decay_rate: 0.9772372209558107
+decay_epoch: 1
+first_subsampling_dl: 0.04 #
+density_parameter: 5.0 #
+activation_fn: 'relu'
+init: 'xavier'
+bn_eps: 0.000001
+weight_decay: 0.001
+grad_norm: 100
+in_features_dim: 4 #5
+bottleneck_ratio: 2
+first_features_dim: 64
+local_aggreagtion: 'pseudo_grid' #kpconv没有这个
+pseudo_grid: #kpconv没有这个
+  fixed_kernel_points: 'center'
+  KP_influence: 'linear' #
+  KP_extent: 1.0 #
+  num_kernel_points: 15 #
+  convolution_mode: 'sum' #
+  output_conv: False
+
+epoch_steps: 600 #
+validation_size: 50 #
+in_radius: 2.0 #
+augment_scale_anisotropic: True #
+augment_symmetries: #
+  - True
+  - False
+  - False
+augment_rotation: 'vertical' #
+augment_scale_min: 0.9 #
+augment_scale_max: 1.1 #
+augment_noise: 0.001 #
+augment_color: 1.0 #
